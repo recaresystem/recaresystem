@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ReCareSystem – Where Leather Lives Longer</title>
+<meta name="description" content="Premium mobile Lederrestauration in Hamburg. Fahrzeuginterieur, Möbel, Accessoires. Hausbesuch mit Qualitätsgarantie.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --dark:#1a1a18;
+  --dark2:#2C2C2A;
+  --mid:#444441;
+  --gray:#888780;
+  --light:#B4B2A9;
+  --bg:#F7F6F3;
+  --white:#ffffff;
+  --green:#25D366;
+  --border:rgba(44,44,42,0.12);
+}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;color:var(--dark2);background:var(--white);-webkit-font-smoothing:antialiased;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:0.5px solid var(--border);padding:0 5%;}
+.nav-inner{max-width:1140px;margin:0 auto;height:64px;display:flex;align-items:center;justify-content:space-between;}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.logo-icon{width:38px;height:38px;position:relative;}
+.logo-icon img{width:100%;height:100%;object-fit:contain;}
+.logo-line{width:2.5px;height:40px;background:var(--dark2);border-radius:1px;}
+.logo-text{}
+.logo-name{font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:400;color:var(--dark2);line-height:1;letter-spacing:-0.01em;}
+.logo-name strong{font-weight:700;}
+.logo-name span{font-weight:300;color:var(--gray);}
+.logo-tag{font-size:0.58rem;letter-spacing:0.14em;font-style:italic;color:var(--gray);margin-top:2px;}
+.nav-links{display:flex;align-items:center;gap:2rem;}
+.nav-links a{font-size:0.82rem;color:var(--gray);text-decoration:none;transition:color .2s;}
+.nav-links a:hover{color:var(--dark2);}
+.nav-cta{background:var(--dark2);color:#fff;border:none;padding:9px 20px;border-radius:5px;font-size:0.82rem;font-family:'DM Sans',sans-serif;cursor:pointer;text-decoration:none;transition:background .2s;}
+.nav-cta:hover{background:var(--mid);}
+.nav-wa{background:var(--green);color:#fff;border:none;padding:9px 16px;border-radius:5px;font-size:0.82rem;font-family:'DM Sans',sans-serif;cursor:pointer;text-decoration:none;display:flex;align-items:center;gap:6px;transition:background .2s;}
+.nav-wa:hover{background:#1ebe5a;}
+
+/* HERO */
+.hero{background:var(--dark);min-height:100vh;display:flex;align-items:center;padding:100px 5% 80px;position:relative;overflow:hidden;}
+.hero-bg-rcs{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Playfair Display',serif;font-size:28vw;font-weight:400;color:rgba(255,255,255,0.018);white-space:nowrap;pointer-events:none;line-height:1;user-select:none;}
+.hero-inner{max-width:1140px;margin:0 auto;width:100%;position:relative;z-index:1;}
+.hero-eye{font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:#5F5E5A;margin-bottom:2rem;display:flex;align-items:center;gap:14px;}
+.hero-eye::before{content:'';display:block;width:36px;height:0.5px;background:#5F5E5A;}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,6vw,5rem);font-weight:400;color:#fff;line-height:1.08;margin-bottom:1.5rem;max-width:700px;}
+.hero h1 em{font-style:italic;color:var(--gray);}
+.hero-sub{font-size:1rem;color:#5F5E5A;line-height:1.9;max-width:480px;margin-bottom:3rem;font-weight:300;}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;}
+.btn-hero-wa{background:var(--green);color:#fff;border:none;padding:14px 28px;border-radius:6px;font-size:0.9rem;font-weight:500;font-family:'DM Sans',sans-serif;cursor:pointer;display:flex;align-items:center;gap:8px;text-decoration:none;transition:background .2s;}
+.btn-hero-wa:hover{background:#1ebe5a;}
+.btn-hero-dark{background:rgba(255,255,255,0.08);color:#fff;border:0.5px solid rgba(255,255,255,0.15);padding:14px 28px;border-radius:6px;font-size:0.9rem;font-family:'DM Sans',sans-serif;cursor:pointer;text-decoration:none;transition:all .2s;}
+.btn-hero-dark:hover{background:rgba(255,255,255,0.13);}
+.btn-hero-ghost{background:transparent;color:var(--gray);border:0.5px solid #3a3a38;padding:14px 28px;border-radius:6px;font-size:0.9rem;font-family:'DM Sans',sans-serif;cursor:pointer;text-decoration:none;transition:all .2s;}
+.btn-hero-ghost:hover{border-color:var(--gray);color:var(--light);}
+.hero-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);color:#3a3a38;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:8px;}
+.hero-scroll::after{content:'';display:block;width:0.5px;height:40px;background:#3a3a38;}
+
+/* TRUST */
+.trust{border-bottom:0.5px solid var(--border);}
+.trust-inner{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);}
+.trust-cell{padding:1.75rem 2rem;border-right:0.5px solid var(--border);text-align:center;}
+.trust-cell:last-child{border-right:none;}
+.trust-val{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:400;color:var(--dark2);}
+.trust-lbl{font-size:0.72rem;color:var(--gray);margin-top:4px;letter-spacing:0.04em;}
+
+/* SECTIONS */
+.sec{padding:6rem 5%;}
+.sec-inner{max-width:1140px;margin:0 auto;}
+.sec-header{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:3rem;padding-bottom:1.25rem;border-bottom:0.5px solid var(--border);}
+.sec-eye{font-size:0.66rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gray);}
+.sec-title{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:400;margin-top:4px;}
+
+/* SERVICES */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--border);}
+.svc{background:var(--white);padding:2rem 1.75rem;}
+.svc-num{font-size:0.65rem;letter-spacing:0.12em;color:var(--gray);margin-bottom:1rem;}
+.svc-icon{font-size:1.5rem;margin-bottom:1rem;}
+.svc h3{font-size:0.92rem;font-weight:500;margin-bottom:8px;}
+.svc p{font-size:0.78rem;color:var(--gray);line-height:1.7;}
+
+/* PRICING */
+.tab-row{display:flex;gap:0;border:0.5px solid var(--border);border-radius:6px;overflow:hidden;width:fit-content;margin-bottom:2rem;}
+.tab{padding:10px 24px;font-size:0.82rem;font-family:'DM Sans',sans-serif;background:var(--white);border:none;cursor:pointer;color:var(--gray);border-right:0.5px solid var(--border);transition:background .15s;}
+.tab:last-child{border-right:none;}
+.tab.on{background:var(--dark2);color:#fff;}
+.price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1px;background:var(--border);}
+.price-card{background:var(--white);padding:2rem 1.75rem;position:relative;}
+.price-card.feat{background:var(--dark);}
+.p-tier{font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gray);margin-bottom:0.75rem;}
+.price-card.feat .p-tier{color:#5F5E5A;}
+.p-amt{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:400;color:var(--dark2);}
+.price-card.feat .p-amt{color:#fff;}
+.p-from{font-size:0.65rem;color:var(--gray);display:block;margin-bottom:4px;}
+.price-card.feat .p-from{color:#5F5E5A;}
+.p-desc{font-size:0.78rem;color:var(--gray);line-height:1.7;margin-top:0.5rem;}
+.price-card.feat .p-desc{color:#5F5E5A;}
+.pop{position:absolute;top:14px;right:14px;background:rgba(255,255,255,0.15);color:#B4B2A9;font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;padding:3px 9px;border-radius:3px;}
+.price-note{font-size:0.72rem;color:var(--gray);font-style:italic;margin-top:1.25rem;}
+
+/* PROCESS */
+.proc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:var(--border);}
+.proc{background:var(--white);padding:2rem 1.75rem;}
+.proc-n{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:400;color:var(--border);margin-bottom:1rem;}
+.proc h4{font-size:0.88rem;font-weight:500;margin-bottom:6px;}
+.proc p{font-size:0.75rem;color:var(--gray);line-height:1.7;}
+
+/* CONTACT */
+.contact-sec{background:var(--bg);padding:6rem 5%;}
+.contact-inner{max-width:720px;margin:0 auto;}
+.contact-opts{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin-bottom:1px;}
+.c-opt{background:var(--white);padding:2rem;}
+.c-opt-icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;font-size:1.3rem;}
+.c-opt-icon.wa{background:#E7F9EE;}
+.c-opt-icon.fm{background:#E6F1FB;}
+.c-opt h3{font-size:0.95rem;font-weight:500;margin-bottom:6px;}
+.c-opt p{font-size:0.78rem;color:var(--gray);line-height:1.7;margin-bottom:1.25rem;}
+.btn-wa{width:100%;background:var(--green);color:#fff;border:none;padding:12px;border-radius:5px;font-size:0.85rem;font-weight:500;font-family:'DM Sans',sans-serif;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:background .2s;text-decoration:none;}
+.btn-wa:hover{background:#1ebe5a;}
+.btn-dark{width:100%;background:var(--dark2);color:#fff;border:none;padding:12px;border-radius:5px;font-size:0.85rem;font-weight:500;font-family:'DM Sans',sans-serif;cursor:pointer;transition:background .2s;}
+.btn-dark:hover{background:var(--mid);}
+
+/* FORM */
+.form-wrap{background:var(--white);border:0.5px solid var(--border);}
+.form-wrap.hidden{display:none;}
+.form-hd{background:var(--dark);padding:1.5rem 2rem;display:flex;justify-content:space-between;align-items:center;}
+.form-hd h2{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:400;color:#fff;}
+.form-hd p{font-size:0.72rem;color:#5F5E5A;font-style:italic;}
+.form-close{background:none;border:none;color:var(--gray);font-size:1.3rem;cursor:pointer;line-height:1;}
+.form-bd{padding:2rem;}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.fr{margin-bottom:1rem;}
+.fr label{display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--gray);margin-bottom:6px;}
+.fr input,.fr select,.fr textarea{width:100%;padding:10px 12px;border:0.5px solid var(--border);border-radius:5px;font-family:'DM Sans',sans-serif;font-size:0.85rem;color:var(--dark2);background:#fff;outline:none;transition:border-color .2s;}
+.fr input:focus,.fr select:focus,.fr textarea:focus{border-color:var(--dark2);}
+.fr textarea{height:90px;resize:vertical;}
+.upload-z{border:0.5px dashed #ccc;border-radius:5px;padding:1.5rem;text-align:center;cursor:pointer;background:#fafafa;transition:background .2s;}
+.upload-z:hover{background:#f2f2f2;}
+.upload-z p{font-size:0.8rem;color:var(--gray);}
+.upload-z small{font-size:0.7rem;color:#ccc;}
+.prev-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;}
+.prev-img{width:58px;height:58px;border-radius:5px;object-fit:cover;border:0.5px solid var(--border);}
+.submit-btn{width:100%;background:var(--dark2);color:#fff;border:none;padding:14px;border-radius:5px;font-size:0.88rem;font-weight:500;font-family:'DM Sans',sans-serif;cursor:pointer;margin-top:.5rem;transition:background .2s;}
+.submit-btn:hover{background:var(--mid);}
+.ok-msg{display:none;background:#EAF3DE;border:0.5px solid #97C459;border-radius:5px;padding:1rem;text-align:center;color:#3B6D11;font-size:0.85rem;margin-top:.75rem;}
+
+/* FOOTER */
+footer{padding:2.5rem 5%;border-top:0.5px solid var(--border);}
+.foot-inner{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.foot-brand{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:400;}
+.foot-tag{font-size:0.62rem;letter-spacing:0.12em;font-style:italic;color:var(--gray);margin-top:2px;}
+.foot-r{font-size:0.75rem;color:var(--gray);text-align:right;line-height:1.8;}
+
+/* FLOATING WA */
+.wa-float-wrap{position:fixed;bottom:28px;right:28px;z-index:200;display:flex;flex-direction:column;align-items:flex-end;gap:8px;}
+.wa-float-tip{background:var(--dark2);color:#fff;font-size:0.72rem;padding:7px 12px;border-radius:6px;white-space:nowrap;display:none;font-family:'DM Sans',sans-serif;}
+.wa-float-wrap:hover .wa-float-tip{display:block;}
+.wa-float-btn{width:54px;height:54px;border-radius:50%;background:var(--green);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,0.35);font-size:1.6rem;transition:transform .15s;}
+.wa-float-btn:hover{transform:scale(1.08);}
+
+/* MOBILE */
+.mob-menu{display:none;}
+@media(max-width:768px){
+  .nav-links{display:none;}
+  .trust-inner{grid-template-columns:repeat(2,1fr);}
+  .trust-cell:nth-child(2){border-right:none;}
+  .fg{grid-template-columns:1fr;}
+  .contact-opts{grid-template-columns:1fr;}
+  .hero h1{font-size:2.4rem;}
+}
+
+/* ANIMATIONS */
+.fade-up{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease;}
+.fade-up.visible{opacity:1;transform:translateY(0);}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="#">
+      <div class="logo-line"></div>
+      <div class="logo-text">
+        <div class="logo-name">Re<strong>Care</strong><span>System.</span></div>
+        <div class="logo-tag">Where Leather Lives Longer</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#leistungen">Leistungen</a>
+      <a href="#preise">Preise</a>
+      <a href="#kontakt">Kontakt</a>
+      <a class="nav-wa" href="https://wa.me/4900000000000?text=Hallo%20ReCareSystem%2C%20ich%20m%C3%B6chte%20eine%20Lederrestauration%20anfragen." target="_blank">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+      <a class="nav-cta" href="#kontakt">Termin anfragen</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-rcs">RCS</div>
+  <div class="hero-inner">
+    <div class="hero-eye">Premium Lederrestauration · Hamburg &amp; Umgebung</div>
+    <h1>Leder verdient<br>mehr als<br><em>ersetzt zu werden.</em></h1>
+    <p class="hero-sub">Fahrzeuginterieur, Designermöbel, Accessoires – wir restaurieren Ihr Leder mobil, fachgerecht und dauerhaft. Direkt vor Ort in Hamburg.</p>
+    <div class="hero-btns">
+      <a class="btn-hero-wa" href="https://wa.me/4900000000000?text=Hallo%20ReCareSystem%2C%20ich%20m%C3%B6chte%20eine%20Anfrage%20stellen." target="_blank">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Jetzt per WhatsApp anfragen
+      </a>
+      <a class="btn-hero-dark" href="#kontakt">Formular nutzen</a>
+      <a class="btn-hero-ghost" href="#preise">Preise ansehen</a>
+    </div>
+  </div>
+  <div class="hero-scroll">Scroll</div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust">
+  <div class="trust-inner">
+    <div class="trust-cell"><div class="trust-val">Mobil</div><div class="trust-lbl">Hausbesuch Hamburg</div></div>
+    <div class="trust-cell"><div class="trust-val">24h</div><div class="trust-lbl">Antwortzeit</div></div>
+    <div class="trust-cell"><div class="trust-val">ab 149€</div><div class="trust-lbl">Faire Preise</div></div>
+    <div class="trust-cell"><div class="trust-val">100%</div><div class="trust-lbl">Qualitätsgarantie</div></div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="sec" id="leistungen">
+  <div class="sec-inner">
+    <div class="sec-header fade-up">
+      <div><div class="sec-eye">Leistungen</div><div class="sec-title">Was wir für Sie tun</div></div>
+    </div>
+    <div class="services-grid fade-up">
+      <div class="svc"><div class="svc-num">01</div><div class="svc-icon">🚗</div><h3>Fahrzeuginterieur</h3><p>Autositze, Armaturenbrett, Lenkrad – Kratzer, Risse und Verfärbungen fachgerecht restauriert.</p></div>
+      <div class="svc"><div class="svc-num">02</div><div class="svc-icon">🛋️</div><h3>Sofas &amp; Möbel</h3><p>Designermöbel und Polstermöbel – von leichten Kratzern bis zur Komplett-Restaurierung.</p></div>
+      <div class="svc"><div class="svc-num">03</div><div class="svc-icon">👜</div><h3>Taschen &amp; Accessoires</h3><p>Handtaschen, Geldbörsen, Gürtel – Lederaccessoires wieder wie neu.</p></div>
+      <div class="svc"><div class="svc-num">04</div><div class="svc-icon">🧥</div><h3>Lederbekleidung</h3><p>Jacken und Hosen professionell aufgearbeitet und restauriert.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="sec" id="preise" style="background:var(--bg);padding-top:5rem;padding-bottom:5rem;">
+  <div class="sec-inner">
+    <div class="sec-header fade-up">
+      <div><div class="sec-eye">Leistungen &amp; Preise</div><div class="sec-title">Transparente Pakete</div></div>
+    </div>
+    <div class="tab-row fade-up">
+      <button class="tab on" id="tab-a" onclick="showTab('a')">Fahrzeuginterieur</button>
+      <button class="tab" id="tab-b" onclick="showTab('b')">Möbel</button>
+    </div>
+    <div id="grid-a" class="price-grid fade-up">
+      <div class="price-card"><div class="p-tier">Essential</div><div class="p-amt"><span class="p-from">ab</span>149 €</div><p class="p-desc">Kratzer, Abschürfungen, leichte Farbverluste</p></div>
+      <div class="price-card feat"><div class="pop">Beliebt</div><div class="p-tier">Signature</div><div class="p-amt"><span class="p-from">ab</span>249 €</div><p class="p-desc">Risse, Beschädigungen, Brandlöcher, Sitzwangen</p></div>
+      <div class="price-card"><div class="p-tier">Restoration</div><div class="p-amt"><span class="p-from">ab</span>399 €</div><p class="p-desc">Starke Abnutzung, größere Reparaturen, Teilrestauration</p></div>
+      <div class="price-card"><div class="p-tier">Full Interior Refresh</div><div class="p-amt"><span class="p-from">ab</span>799 €</div><p class="p-desc">Mehrere Bauteile, umfassende Aufbereitung</p></div>
+    </div>
+    <div id="grid-b" class="price-grid fade-up" style="display:none;">
+      <div class="price-card"><div class="p-tier">Essential</div><div class="p-amt"><span class="p-from">ab</span>199 €</div><p class="p-desc">Leichte Beschädigungen und Farbauffrischung</p></div>
+      <div class="price-card feat"><div class="pop">Beliebt</div><div class="p-tier">Signature</div><div class="p-amt"><span class="p-from">ab</span>349 €</div><p class="p-desc">Rissreparaturen und Aufarbeitung</p></div>
+      <div class="price-card"><div class="p-tier">Restoration</div><div class="p-amt"><span class="p-from">ab</span>599 €</div><p class="p-desc">Komplette Sitzflächen oder Armlehnen</p></div>
+      <div class="price-card"><div class="p-tier">Full Sofa Restoration</div><div class="p-amt"><span class="p-from">ab</span>1.199 €</div><p class="p-desc">Komplette Restaurierung Ihres Sofas</p></div>
+    </div>
+    <p class="price-note fade-up">* Endpreis nach kostenloser Begutachtung vor Ort. Alle Preise inkl. Anfahrt in Hamburg &amp; Umgebung.</p>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="sec">
+  <div class="sec-inner">
+    <div class="sec-header fade-up">
+      <div><div class="sec-eye">Ablauf</div><div class="sec-title">So funktioniert es</div></div>
+    </div>
+    <div class="proc-grid fade-up">
+      <div class="proc"><div class="proc-n">01</div><h4>Anfrage senden</h4><p>Fotos und Beschreibung per WhatsApp oder Formular – unkompliziert und schnell.</p></div>
+      <div class="proc"><div class="proc-n">02</div><h4>Kostenvoranschlag</h4><p>Wir melden uns innerhalb von 24 Stunden mit einem fairen Angebot.</p></div>
+      <div class="proc"><div class="proc-n">03</div><h4>Termin vor Ort</h4><p>Wir kommen zum Wunschtermin direkt zu Ihnen – kein Aufwand für Sie.</p></div>
+      <div class="proc"><div class="proc-n">04</div><h4>Ergebnis</h4><p>Ihr Leder restauriert – sauber, dauerhaft und wie neu.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-sec" id="kontakt">
+  <div class="contact-inner">
+    <div style="margin-bottom:2rem;" class="fade-up">
+      <div class="sec-eye">Kontakt</div>
+      <div class="sec-title" style="font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:400;margin-top:4px;">Wie möchten Sie anfragen?</div>
+      <p style="font-size:.83rem;color:var(--gray);margin-top:6px;">Wir antworten innerhalb von 24 Stunden.</p>
+    </div>
+    <div class="contact-opts fade-up">
+      <div class="c-opt">
+        <div class="c-opt-icon wa">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </div>
+        <h3>WhatsApp</h3>
+        <p>Schicken Sie uns einfach Fotos vom Schaden – schnell und unkompliziert.</p>
+        <a class="btn-wa" href="https://wa.me/4900000000000?text=Hallo%20ReCareSystem%20👋%0A%0AIch%20möchte%20eine%20Lederrestauration%20anfragen.%0A%0AMeine%20Anfrage%3A%0A-%20Art%20des%20Leders%3A%20%0A-%20Schadenbeschreibung%3A%20" target="_blank">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Jetzt per WhatsApp anfragen
+        </a>
+      </div>
+      <div class="c-opt">
+        <div class="c-opt-icon fm">📧</div>
+        <h3>Formular</h3>
+        <p>Detaillierte Anfrage mit Paketauswahl, Beschreibung und Foto-Upload.</p>
+        <button class="btn-dark" onclick="toggleForm()">Formular öffnen</button>
+      </div>
+    </div>
+    <div class="form-wrap hidden fade-up" id="form-wrap">
+      <div class="form-hd">
+        <div><h2>Termin anfragen</h2><p>ReCareSystem · Hamburg &amp; Umgebung</p></div>
+        <button class="form-close" onclick="toggleForm()">✕</button>
+      </div>
+      <div class="form-bd">
+        <div class="fg">
+          <div class="fr"><label>Name</label><input type="text" id="f-name" placeholder="Ihr Name"></div>
+          <div class="fr"><label>PLZ / Ort</label><input type="text" placeholder="20095 Hamburg"></div>
+        </div>
+        <div class="fg">
+          <div class="fr"><label>Telefon</label><input type="tel" id="f-tel" placeholder="+49 ..."></div>
+          <div class="fr"><label>E-Mail</label><input type="email" id="f-mail" placeholder="name@mail.de"></div>
+        </div>
+        <div class="fg">
+          <div class="fr"><label>Kategorie</label>
+            <select><option value="">Bitte wählen...</option><option>Fahrzeuginterieur</option><option>Möbel / Sofa</option><option>Tasche / Accessoire</option><option>Sonstiges</option></select>
+          </div>
+          <div class="fr"><label>Paket</label>
+            <select><option value="">Bitte wählen...</option><option>Essential</option><option>Signature</option><option>Restoration</option><option>Full Refresh / Full Sofa</option><option>Noch unsicher</option></select>
+          </div>
+        </div>
+        <div class="fr"><label>Schadenbeschreibung</label><textarea placeholder="Was ist beschädigt? Farbe des Leders, Fahrzeugmodell o. ä."></textarea></div>
+        <div class="fr"><label>Fotos vom Schaden</label>
+          <div class="upload-z" onclick="document.getElementById('f-ph').click()">
+            <p>📷 Bilder hochladen oder hier ablegen</p>
+            <small>JPG, PNG · bis zu 5 Fotos</small>
+          </div>
+          <input type="file" id="f-ph" accept="image/*" multiple style="display:none">
+          <div class="prev-row" id="prev"></div>
+        </div>
+        <button class="submit-btn" onclick="doSubmit()">Anfrage absenden →</button>
+        <div class="ok-msg" id="ok-msg">✓ Vielen Dank! Wir melden uns innerhalb von 24 Stunden.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-inner">
+    <div>
+      <div class="foot-brand">ReCareSystem.</div>
+      <div class="foot-tag">Where Leather Lives Longer</div>
+    </div>
+    <div class="foot-r">
+      Premium Lederrestauration · Hamburg &amp; Umgebung<br>
+      <a href="https://wa.me/4900000000000" target="_blank" style="color:var(--green);text-decoration:none;">WhatsApp</a>
+      &nbsp;·&nbsp;
+      <a href="#kontakt" style="color:var(--gray);text-decoration:none;">Impressum</a>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING WA -->
+<div class="wa-float-wrap">
+  <div class="wa-float-tip">Direkt per WhatsApp anfragen</div>
+  <a class="wa-float-btn" href="https://wa.me/4900000000000?text=Hallo%20ReCareSystem%2C%20ich%20m%C3%B6chte%20anfragen." target="_blank" aria-label="WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</div>
+
+<script>
+const WA = '4900000000000'; // ← HIER deine Nummer eintragen
+
+function showTab(t){
+  document.getElementById('grid-a').style.display = t==='a'?'grid':'none';
+  document.getElementById('grid-b').style.display = t==='b'?'grid':'none';
+  document.getElementById('tab-a').classList.toggle('on', t==='a');
+  document.getElementById('tab-b').classList.toggle('on', t==='b');
+}
+
+function toggleForm(){
+  const fw = document.getElementById('form-wrap');
+  fw.classList.toggle('hidden');
+  if(!fw.classList.contains('hidden')) setTimeout(()=>fw.scrollIntoView({behavior:'smooth',block:'start'}),50);
+}
+
+document.getElementById('f-ph').addEventListener('change',function(){
+  const p=document.getElementById('prev'); p.innerHTML='';
+  Array.from(this.files).slice(0,5).forEach(f=>{
+    const img=document.createElement('img'); img.className='prev-img';
+    img.src=URL.createObjectURL(f); p.appendChild(img);
+  });
+});
+
+function doSubmit(){
+  const n=document.getElementById('f-name').value.trim();
+  const c=document.getElementById('f-tel').value.trim()||document.getElementById('f-mail').value.trim();
+  if(!n||!c){alert('Bitte Name und Kontakt ausfüllen.');return;}
+  document.querySelector('.submit-btn').style.display='none';
+  document.getElementById('ok-msg').style.display='block';
+}
+
+// Scroll animations
+const obs = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
+},{threshold:0.1});
+document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
